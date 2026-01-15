@@ -71,8 +71,17 @@
 		if(startscene === null OR !scene[get(startscene)], copy(startscene,scene[0].name); );
 		loadscene(get(startscene), null, MERGE);
 		if(startactions !== null, startactions() );
+        playsound(bg, '../sounds/sound.mp3');
 	</action>
 
+	<plugin name="soundinterface"
+        url.flash="./plugins/soundinterface.swf"
+        url.html5="./plugins/soundinterface.js"
+        preload="true"
+        rootpath=""
+        volume="1.0"
+        mute="false"
+	/>
 
 	
 	<scene name="scene_VIEW_1_-_Panorama" title="VIEW_1 - Panorama" onstart="" thumburl="panos/VIEW_1_-_Panorama.tiles/thumb.jpg" lat="" lng="" heading="">

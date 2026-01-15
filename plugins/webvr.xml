@@ -887,5 +887,38 @@
 			copy(layer[vr_setup_vig2].html, i_vig);
 		);
 	</action>
-
+	
+		<mobilevr_device_database>
+		<device name="iPhone 5/5S/SE" screen="320x568x2" size="4.0" bevel="3" />
+		<device name="iPhone 6/6S/7/8" screen="375x667x2" size="4.7" />
+		<device name="iPhone 6/6S/7/8 Plus" screen="414x736" size="5.5" />
+		<device name="iPhone 6/6S/7/8 Plus (zoomed)" screen="375x667x3" size="5.5" />
+		<device name="iPhone X/XS/11Pro" screen="375x812x3" size="5.85|5.33" />
+		<device name="iPhone XS/11Pro Max" screen="414x896x3" size="6.46|5.95" />
+		<device name="iPhone XR/11" screen="414x896x2" size="6.06|5.58" />
+		<device name="iPhone 12/12Pro" screen="390x844" size="6.1" />
+		<device name="iPhone 12Pro Max" screen="428x926" size="6.7" />
+		<device name="Samsung S6" ua="sm-g930" size="5.1" />
+		<device name="Samsung S6 Edge" ua="sm-g925" size="5.1" />
+		<device name="Samsung S6 Edge Plus" ua="sm-g928" size="5.7" />
+		<device name="Samsung S7" ua="sm-g930" size="5.1" />
+		<device name="Samsung S7 Edge" ua="sm-g935" size="5.5" />
+		<device name="Samsung S8" ua="sm-g950" size="5.8" />
+		<device name="Samsung S8+" ua="sm-g955" size="6.2" />
+		<device name="Samsung S9" ua="sm-g960" size="5.8" />
+		<device name="Samsung S9+" ua="sm-g965" size="6.2" />
+		<device name="Samsung S10e" ua="sm-g970" size="5.8" />
+		<device name="Samsung S10" ua="sm-g973" size="6.1" />
+		<device name="Samsung S10+" ua="sm-g975" size="6.4" />
+		<device name="Samsung S10 5G" ua="sm-g977" size="6.7" />
+		<device name="Samsung Note 7" ua="sm-n930" size="5.7" />
+		<device name="Samsung Note 8" ua="sm-n950" size="6.3" />
+		<device name="Samsung Note 9" ua="sm-n960" size="6.4" />
+		<device name="Samsung Note 10" ua="sm-n970" size="6.3" />
+		<device name="Samsung Note 10 5G" ua="sm-n971" size="6.3" />
+		<device name="Samsung Note 10+" ua="sm-n975" size="6.8" />
+		<device name="Samsung Note 10+ 5G" ua="sm-n976" size="6.8" />
+		<device name="Huawei P10 Lite" ua="HUAWEIWAS-TL10" size="5.2" />
+		<device name="Huawei P20 Lite" ua="HUAWEIANE-LX1" size="5.84" />
+	</mobilevr_device_database>
 </krpano>
