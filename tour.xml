@@ -71,9 +71,25 @@
 		if(startscene === null OR !scene[get(startscene)], copy(startscene,scene[0].name); );
 		loadscene(get(startscene), null, MERGE);
 		if(startactions !== null, startactions() );
+        playsound(bg, '../sounds/sound.mp3');
 	</action>
 
+    <plugin name="soundinterface"
+        url.flash="./plugins/soundinterface.swf"
+        url.html5="./plugins/soundinterface.js"
+        preload="true"
+        rootpath=""
+        volume="1.0"
+        mute="false"
+        />
 
+
+    <style name="skin_hotspot_target" url="./skin/target.png" scale="0.4"  edge="top" distorted="true"
+           onover="tween(scale,0.5);"
+           onout="tween(scale,0.4);"
+		   onclick="skin_hotspotstyle_click();"
+           onloaded="do_crop_animation(128,128, 60);if(linkedscene AND skin_settings.tooltips_hotspots, copy(tooltip,scene[get(linkedscene)].title); loadstyle(skin_tooltips); );"
+           />
 	
 	<scene name="scene_VIEW_1_-_Panorama" title="VIEW_1 - Panorama" onstart="" thumburl="panos/VIEW_1_-_Panorama.tiles/thumb.jpg" lat="" lng="" heading="">
 
@@ -84,7 +100,7 @@
 		<image>
 			<cube url="panos/VIEW_1_-_Panorama.tiles/pano_%s.jpg" />
 		</image>
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="-0.627" atv="28.781" linkedscene="scene_view_2_-_panorama" />
+		<hotspot name="spot1" style="skin_hotspot_target" ath="-0.627" atv="28.781" linkedscene="scene_view_2_-_panorama" />
 
 	</scene>
 
@@ -97,9 +113,9 @@
 		<image>
 			<cube url="panos/VIEW_2_-_Panorama.tiles/pano_%s.jpg" />
 		</image>
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="-0.837" atv="30.904" linkedscene="scene_view_1_-_panorama" />
+		<hotspot name="spot1" style="skin_hotspot_target" ath="-0.837" atv="30.904" linkedscene="scene_view_1_-_panorama" />
 
-		
+
 	</scene>
 
 
