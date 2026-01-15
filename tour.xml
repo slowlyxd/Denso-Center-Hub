@@ -90,6 +90,12 @@
 		   onclick="skin_hotspotstyle_click();"
            onloaded="do_crop_animation(128,128, 60);if(linkedscene AND skin_settings.tooltips_hotspots, copy(tooltip,scene[get(linkedscene)].title); loadstyle(skin_tooltips); );"
            />
+    <style name="skin_hotspot_arrow" url="./skin/arrow.png" scale="0.4"  edge="top" rotate="180" distorted="true"
+           onover="tween(scale,0.5);"
+           onout="tween(scale,0.4);"
+		   onclick="skin_hotspotstyle_click();"
+           onloaded="do_crop_animation(64,64, 60);if(linkedscene AND skin_settings.tooltips_hotspots, copy(tooltip,scene[get(linkedscene)].title); loadstyle(skin_tooltips); );"
+           />
 	
 	<scene name="scene_VIEW_1_-_Panorama" title="VIEW_1 - Panorama" onstart="" thumburl="panos/VIEW_1_-_Panorama.tiles/thumb.jpg" lat="" lng="" heading="">
 
@@ -100,7 +106,7 @@
 		<image>
 			<cube url="panos/VIEW_1_-_Panorama.tiles/pano_%s.jpg" />
 		</image>
-		<hotspot name="spot1" style="skin_hotspot_target" ath="-0.627" atv="28.781" linkedscene="scene_view_2_-_panorama" />
+		<hotspot name="spot1" style="skin_hotspot_arrow" ath="-0.627" atv="28.781" linkedscene="scene_view_2_-_panorama" />
 
 	</scene>
 
@@ -113,7 +119,7 @@
 		<image>
 			<cube url="panos/VIEW_2_-_Panorama.tiles/pano_%s.jpg" />
 		</image>
-		<hotspot name="spot1" style="skin_hotspot_target" ath="-0.837" atv="30.904" linkedscene="scene_view_1_-_panorama" />
+		<hotspot name="spot1" style="skin_hotspot_arrow" ath="-0.837" atv="30.904" linkedscene="scene_view_1_-_panorama" />
 
 
 	</scene>
