@@ -133,7 +133,7 @@
 		<image>
 			<cube url="panos/VIEW_1_-_Panorama.tiles/pano_%s.jpg" />
 		</image>
-		<hotspot name="spot1" style="skin_hotspot_arrow" ath="-0.627" atv="28.781" linkedscene="scene_view_2_-_panorama" />
+		<hotspot name="spot1" style="skin_hotspot_target" ath="-0.627" atv="28.781" linkedscene="scene_view_2_-_panorama" />
 
 	</scene>
 
@@ -146,7 +146,7 @@
 		<image>
 			<cube url="panos/VIEW_2_-_Panorama.tiles/pano_%s.jpg" />
 		</image>
-		<hotspot name="spot1" style="skin_hotspot_arrow" ath="-0.837" atv="30.904" linkedscene="scene_view_1_-_panorama" />
+		<hotspot name="spot1" style="skin_hotspot_target" ath="-0.837" atv="30.904" linkedscene="scene_view_1_-_panorama" />
 
 
 	</scene>
