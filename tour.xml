@@ -6,7 +6,7 @@
     <!-- <include url="intro.xml" /> -->
     <!-- <include url="info.xml" /> -->
     <!-- <include url="scrollmenu.xml" /> -->
-    <include url="test.xml" />
+    <!-- <include url="test.xml" /> -->
 
 	<!-- customize skin settings: maps, gyro, webvr, thumbnails, tooltips, layout, design, ... -->
 	<skin_settings maps="false"
