@@ -74,18 +74,30 @@
         playsound(bg, '../sounds/sound.mp3');
 	</action>
 
-	<plugin name="soundinterface"
+    <plugin name="soundinterface"
         url.flash="./plugins/soundinterface.swf"
         url.html5="./plugins/soundinterface.js"
         preload="true"
         rootpath=""
         volume="1.0"
         mute="false"
-	/>
-
+        />
+    <style name="skin_hotspot_target" url="./skin/target.png" scale="0.4"  edge="top" distorted="true"
+           onover="tween(scale,0.5);"
+           onout="tween(scale,0.4);"
+		   onclick="skin_hotspotstyle_click();"
+           onloaded="do_crop_animation(128,128, 60);if(linkedscene AND skin_settings.tooltips_hotspots, copy(tooltip,scene[get(linkedscene)].title); loadstyle(skin_tooltips); );"
+           />
+    <style name="skin_textmenu_view_name" url="%SWFPATH%/plugins/textfield.swf" width="400" height="100"
+        background="false" border="false"
+        padding="5 10"
+        margin="5"
+        css="text-align:right; color:#000000; font-family:Arial; font-weight:normal; font-size:30px;"
+        onout="set(background,false)"/>
 	
-	<scene name="scene_VIEW_1_-_Panorama" title="VIEW_1 - Panorama" onstart="" thumburl="panos/VIEW_1_-_Panorama.tiles/thumb.jpg" lat="" lng="" heading="">
-
+	<scene name="scene_VIEW_1_-_Panorama" title="OPTION 1" onstart="" thumburl="panos/VIEW_1_-_Panorama.tiles/thumb.jpg" lat="" lng="" heading="">
+		<layer name="view_name_1"  style="skin_textmenu_view_name" align="righttop" x="0" y="0"
+                        html="OPTION 1"/>
 		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
 		<preview url="panos/VIEW_1_-_Panorama.tiles/preview.jpg" />
@@ -93,6 +105,23 @@
 		<image>
 			<cube url="panos/VIEW_1_-_Panorama.tiles/pano_%s.jpg" />
 		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-0.627" atv="28.781" linkedscene="scene_view_2_-_panorama"
+		onhover="showtext([img src=./images/view1.jpg width=250px][/img][p]OPTION 2[/p],VRW_STYLE);"/>
+
+	</scene>
+
+	<scene name="scene_VIEW_2_-_Panorama" title="OPTION 2" onstart="" thumburl="panos/VIEW_2_-_Panorama.tiles/thumb.jpg" lat="" lng="" heading="">
+		<layer name="view_name_1"  style="skin_textmenu_view_name" align="righttop" x="0" y="0"
+                        html="OPTION 2"/>
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/VIEW_2_-_Panorama.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/VIEW_2_-_Panorama.tiles/pano_%s.jpg" />
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-0.837" atv="30.904" linkedscene="scene_view_1_-_panorama"
+		onhover="showtext([img src=./images/view2.jpg width=250px][/img][p]OPTION 1[/p],VRW_STYLE);"/>
 
 	</scene>
 
