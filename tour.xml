@@ -110,6 +110,12 @@
             );
         );
     </action>
+    <style name="skin_textmenu_view_name" url="%SWFPATH%/plugins/textfield.swf" width="400" height="100"
+        background="false" border="false"
+        padding="5 10"
+        margin="5"
+        css="text-align:right; color:#000000; font-family:Arial; font-weight:normal; font-size:30px;"
+        onout="set(background,false)"/>
 
     <style name="skin_hotspot_target" url="./skin/target.png" scale="0.4"  edge="top" distorted="true"
            onover="tween(scale,0.5);"
