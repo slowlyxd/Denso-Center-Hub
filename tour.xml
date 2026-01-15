@@ -88,7 +88,28 @@
         volume="1.0"
         mute="false"
         />
-
+	<action name="do_crop_animation" scope="local" args="framewidth, frameheight, framerate">
+        calc(local.xframes, (caller.imagewidth /framewidth) BOR 0);
+        calc(local.frames, xframes * ((caller.imageheight / frameheight) BOR 0));
+        def(local.frame, integer, 0);
+        
+        calc(caller.crop, '0|0|' + framewidth + '|' + frameheight);
+        
+        setinterval(calc('crop_anim_' + caller.name), calc(1.0 / framerate),
+            if(caller.loaded,
+                inc(frame);
+                if(frame GE frames, if(caller.onlastframe !== null, callwith(caller, onlastframe() ) ); set(frame,0); );
+                mod(xpos, frame, xframes);
+                div(ypos, frame, xframes);
+                Math.floor(ypos);
+                mul(xpos, framewidth);
+                mul(ypos, frameheight);
+                calc(caller.crop, xpos + '|' + ypos + '|' + framewidth + '|' + frameheight);
+              ,
+                clearinterval(calc('crop_anim_' + caller.name));
+            );
+        );
+    </action>
 
     <style name="skin_hotspot_target" url="./skin/target.png" scale="0.4"  edge="top" distorted="true"
            onover="tween(scale,0.5);"
